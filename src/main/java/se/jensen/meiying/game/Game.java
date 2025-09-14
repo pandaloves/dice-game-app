@@ -42,7 +42,7 @@ public class Game {
                 player2.setFirstname("Computer");
                 player2.setLastname("AI");
             } catch (IllegalArgumentException e) {
-                e.getMessage();
+                JOptionPane.showMessageDialog(null, e.getMessage());
             }
         } else {
             singlePlayer = false;
