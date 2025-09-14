@@ -1,6 +1,6 @@
 package se.jensen.meiying.game;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class Game {
     private Player player1;
