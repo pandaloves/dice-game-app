@@ -16,14 +16,24 @@ public class Game {
     }
 
     private void inputPlayerName(Player player, String playerNumber) {
-        boolean validInput = false;
-        while (!validInput) {
+        boolean validFirstName = false;
+        boolean validLastName = false;
+
+        while (!validFirstName) {
             try {
-                String firstname = JOptionPane.showInputDialog("Enter first name for Player " + playerNumber + ":");
+                String firstname = JOptionPane.showInputDialog("Enter first name for Player" + playerNumber + " :");
                 player.setFirstname(firstname);
-                String lastname = JOptionPane.showInputDialog("Enter last name for Player " + playerNumber + ":");
+                validFirstName = true;
+            } catch (IllegalArgumentException e) {
+                JOptionPane.showMessageDialog(null, e.getMessage() + ". Please try again.");
+            }
+        }
+
+        while (!validLastName) {
+            try {
+                String lastname = JOptionPane.showInputDialog("Enter last name for Player" + playerNumber + " :");
                 player.setLastname(lastname);
-                validInput = true;
+                validLastName = true;
             } catch (IllegalArgumentException e) {
                 JOptionPane.showMessageDialog(null, e.getMessage() + ". Please try again.");
             }
@@ -58,7 +68,7 @@ public class Game {
         int roll2 = dice.roll();
         player1.addToScore(roll2);
         JOptionPane.showMessageDialog(null, player1.getFullName() + " rolled " + roll2 + " on second roll.");
-        JOptionPane.showMessageDialog(null, player1.getFullName() + "'s total score: " + player1.getScore());
+        JOptionPane.showMessageDialog(null, player1.getFullName() + "'s total score: " + player1.getScore() + ".");
 
         int roll3 = dice.roll();
         player2.addToScore(roll3);
@@ -66,7 +76,7 @@ public class Game {
         int roll4 = dice.roll();
         player2.addToScore(roll4);
         JOptionPane.showMessageDialog(null, player2.getFullName() + " rolled " + roll4 + " on second roll.");
-        JOptionPane.showMessageDialog(null, player2.getFullName() + "'s total score: " + player2.getScore());
+        JOptionPane.showMessageDialog(null, player2.getFullName() + "'s total score: " + player2.getScore() + ".");
 
         if (player1.getScore() > player2.getScore()) {
             JOptionPane.showMessageDialog(null, "Player1 " + player1.getFullName() + " wins with " + player1.getScore() + " points!");
