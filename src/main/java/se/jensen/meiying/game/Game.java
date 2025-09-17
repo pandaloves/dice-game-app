@@ -1,6 +1,6 @@
 package se.jensen.meiying.game;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class Game {
     private Player player1;
@@ -69,9 +69,9 @@ public class Game {
         JOptionPane.showMessageDialog(null, player2.getFullName() + "'s total score: " + player2.getScore());
 
         if (player1.getScore() > player2.getScore()) {
-            JOptionPane.showMessageDialog(null, player1.getFullName() + " wins with " + player1.getScore() + " points!");
+            JOptionPane.showMessageDialog(null, "Player1 " + player1.getFullName() + " wins with " + player1.getScore() + " points!");
         } else if (player2.getScore() > player1.getScore()) {
-            JOptionPane.showMessageDialog(null, player2.getFullName() + " wins with " + player2.getScore() + " points!");
+            JOptionPane.showMessageDialog(null, "Player2 " + player2.getFullName() + " wins with " + player2.getScore() + " points!");
         } else {
             JOptionPane.showMessageDialog(null, "It's a tie! Both scored " + player1.getScore() + " points.");
         }
