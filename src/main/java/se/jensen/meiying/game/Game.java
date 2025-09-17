@@ -21,7 +21,7 @@ public class Game {
 
         while (!validFirstName) {
             try {
-                String firstname = JOptionPane.showInputDialog("Enter first name for Player" + playerNumber + " :");
+                String firstname = JOptionPane.showInputDialog("Enter the first name for Player" + playerNumber + " :");
                 player.setFirstname(firstname);
                 validFirstName = true;
             } catch (IllegalArgumentException e) {
@@ -31,7 +31,7 @@ public class Game {
 
         while (!validLastName) {
             try {
-                String lastname = JOptionPane.showInputDialog("Enter last name for Player" + playerNumber + " :");
+                String lastname = JOptionPane.showInputDialog("Enter the last name for Player" + playerNumber + " :");
                 player.setLastname(lastname);
                 validLastName = true;
             } catch (IllegalArgumentException e) {
