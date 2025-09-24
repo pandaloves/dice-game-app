@@ -86,8 +86,8 @@ public class Game {
             JOptionPane.showMessageDialog(null, "It's a tie! Both scored " + player1.getScore() + " points.");
         }
 
-        player1.addToScore(-player1.getScore());
-        player2.addToScore(-player2.getScore());
+        player1.resetScore();
+        player2.resetScore();
     }
 
     public void start() {
