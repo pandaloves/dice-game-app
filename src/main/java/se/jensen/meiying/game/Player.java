@@ -34,4 +34,8 @@ public class Player {
     public String getFullName() {
         return firstname.concat(" ").concat(lastname);
     }
+
+    public void resetScore() {
+        this.score = 0;
+    }
 }
